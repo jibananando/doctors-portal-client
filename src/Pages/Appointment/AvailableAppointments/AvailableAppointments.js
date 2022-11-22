@@ -15,8 +15,8 @@ const AvailableAppointments = ({ selectedDate }) => {
     }, [])
 
     return (
-        <section className='mt-32 mb-32 container mx-auto'>
-            <p className='text-center font-bold text-secondary'>Available appointment on {format(selectedDate, 'PP')}</p>
+        <section className='mt-16 mb-32 container mx-auto'>
+            <p className='text-center text-xl font-bold text-secondary'>Available appointment on {format(selectedDate, 'PP')}</p>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
                 {
                     appointmentOptions.map(option => <AppointmentOption
@@ -31,6 +31,7 @@ const AvailableAppointments = ({ selectedDate }) => {
                 <BookingModal
                     selectedDate={selectedDate}
                     treatment={treatment}
+                    setTreatment={setTreatment}
                 ></BookingModal>
             }
         </section>
